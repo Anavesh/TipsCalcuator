@@ -2,7 +2,6 @@ import UIKit
 
 class TipsViewCollectionCell: UICollectionViewCell {
     
-    
     let tipsAmountLabel: UILabel = {
         let button = UILabel()
         button.translatesAutoresizingMaskIntoConstraints = false

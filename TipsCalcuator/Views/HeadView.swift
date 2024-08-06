@@ -2,7 +2,6 @@ import UIKit
 
 class HeadView: UIView {
     
-    // Defining headingLabel
     fileprivate let headingLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -17,7 +16,6 @@ class HeadView: UIView {
         return label
     }()
     
-    // Defining the image
     fileprivate let logoImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -26,7 +24,6 @@ class HeadView: UIView {
         return image
     }()
     
-    // The description of actions to be undertaken
     fileprivate let descriptionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
