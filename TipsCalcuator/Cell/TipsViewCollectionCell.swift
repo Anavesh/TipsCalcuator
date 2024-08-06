@@ -25,6 +25,7 @@ class TipsViewCollectionCell: UICollectionViewCell {
             }
         }
     }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setView()

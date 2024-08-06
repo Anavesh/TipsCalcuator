@@ -2,7 +2,6 @@ import UIKit
 
 class PersonsView: UIView {
 
-
     fileprivate let personsLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Avenir Next", size: 20)
@@ -15,7 +14,7 @@ class PersonsView: UIView {
         return label
     }()
     
-     let personCountLabel: UILabel = {
+    let personCountLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Avenir Next Bold", size: 36)
         label.text = "0"
@@ -34,7 +33,8 @@ class PersonsView: UIView {
         return view
     }()
     
-    // Creating a var for changing the personCountLabel through personIncreaseButton and personDecreaseButton
+    // THis var is for changing the personCountLabel through personIncreaseButton and personDecreaseButton
+    
     var personCounter:Int = 0
     
     let personIncreaseButton: UIButton = {

@@ -61,9 +61,10 @@ class TotalBillView: UIView, UITextFieldDelegate {
     }
     
     // Add gesture recognizer in order to remove keyboard after textbox is filled
+    
     func addTap() {
         let tap = UITapGestureRecognizer(target: self, action:#selector(hideKeyboard))
-        tap.cancelsTouchesInView = false // это позволяет другим нажатиям проходить через view
+        tap.cancelsTouchesInView = false
         self.addGestureRecognizer(tap)
     }
     
@@ -72,9 +73,9 @@ class TotalBillView: UIView, UITextFieldDelegate {
     }
     
     // This is method for hiding keyboard when Return is pressed
-       func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-           sumTextField.resignFirstResponder()
-           return true
-       }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+       sumTextField.resignFirstResponder()
+       return true
+    }
 }
-

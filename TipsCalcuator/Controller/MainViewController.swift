@@ -4,12 +4,14 @@ import UIKit
 class MainViewController: UIViewController {
     
  // Creation of Views that will be place in the ViewController
+    
     let headView = HeadView()
     let totalBillView = TotalBillView()
     let personsView = PersonsView()
     let tipsView = TipsView()
     
-    // Creation of Calculate button. The button is created here because data from different views will be used for the calculation.
+    // Creation of Calculate button. The button is created here because data from different views will be used for the calculation
+    
     let calculateButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -34,13 +36,16 @@ class MainViewController: UIViewController {
         setupConstraints()
 
     }
-    // This method sets the background colour for the main view and adds custom views to the main view.
+    
+    // This method sets the background colour for the main view and adds custom views to the main view
+    
     private func setupView() {
         view.backgroundColor = .white
         addSubviews()
     }
     
-    // This method indicates which subviews shall be placed in the main view.
+    // This method indicates which subviews shall be placed in the main view
+    
     private func addSubviews() {
         [headView, totalBillView, personsView, tipsView, calculateButton].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false

@@ -22,6 +22,7 @@ class TipsView: UIView {
     }()
     
    // This array will define the values of cells in the collection
+    
     fileprivate var tipsArray = ["10%", "15%", "20%","25%"]
     
     var tipsCount = 0
