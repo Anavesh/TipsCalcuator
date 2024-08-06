@@ -1,7 +1,8 @@
 **TipsCalculator**
 
 **Short description:** This app helps users calculate tips based on the bill amount and split the tips among the people present at the table.
-![image](https://github.com/user-attachments/assets/e28fdc01-5efa-48c8-a124-1acba3c48981)
+![image](https://github.com/user-attachments/assets/0d2e647a-fc00-4986-9a9f-2cb49e4b2637)
+
 
 1) The app is designed based on UIKit.
 2) The app supports only portrait orientation.
