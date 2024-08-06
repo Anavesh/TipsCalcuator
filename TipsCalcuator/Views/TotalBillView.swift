@@ -1,6 +1,6 @@
 import UIKit
 
-class TotalBillView: UIView {
+class TotalBillView: UIView, UITextFieldDelegate {
     
     fileprivate let totalBillLabel: UILabel = {
         let label = UILabel()
@@ -32,6 +32,8 @@ class TotalBillView: UIView {
         super.init(frame: frame)
         setupView()
         setupConstraints()
+        addTap()
+        sumTextField.delegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -57,5 +59,22 @@ class TotalBillView: UIView {
             sumTextField.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
     }
+    
+    // Add gesture recognizer in order to remove keyboard after textbox is filled
+    func addTap() {
+        let tap = UITapGestureRecognizer(target: self, action:#selector(hideKeyboard))
+        tap.cancelsTouchesInView = false // это позволяет другим нажатиям проходить через view
+        self.addGestureRecognizer(tap)
+    }
+    
+    @objc func hideKeyboard() {
+        self.endEditing(true)
+    }
+    
+    // Реализация метода UITextFieldDelegate для скрытия клавиатуры при нажатии Return
+       func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+           sumTextField.resignFirstResponder()
+           return true
+       }
 }
 

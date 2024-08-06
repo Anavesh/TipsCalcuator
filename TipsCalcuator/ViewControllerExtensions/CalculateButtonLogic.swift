@@ -4,18 +4,6 @@ import UIKit
 
 extension MainViewController {
     
-    
-    // Add gesture recognizer in order to remove keyboard after textbox is filled
-    func addTap() {
-        let tap = UITapGestureRecognizer(target: self, action:#selector(hideKeyboard))
-        tap.cancelsTouchesInView = false // это позволяет другим нажатиям проходить через view
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func hideKeyboard() {
-        view.endEditing(true)
-    }
-    
     // Adds alert with the result of tips calculation
     @objc func calculateButtonTapped() {
         showAlert()

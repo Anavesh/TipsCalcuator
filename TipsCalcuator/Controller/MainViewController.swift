@@ -32,7 +32,6 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         setupConstraints()
-        addTap()
 
     }
     // This method sets the background colour for the main view and adds custom views to the main view.
