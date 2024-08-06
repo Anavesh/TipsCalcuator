@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  TipsCalcuator
-//
-//  Created by Naira on 05.08.2024.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
