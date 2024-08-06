@@ -9,7 +9,7 @@ class MainViewController: UIViewController {
     let personsView = PersonsView()
     let tipsView = TipsView()
     
-    // Creation of Calculate button. The button is created here because data from different views will be used for the calculation
+    // Creation of Calculate button. The button is created here because data from different views will be used for the calculation.
     let calculateButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -48,4 +48,3 @@ class MainViewController: UIViewController {
         }
     }
 }
-// new comment

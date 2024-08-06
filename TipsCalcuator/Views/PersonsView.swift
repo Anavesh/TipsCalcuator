@@ -34,7 +34,7 @@ class PersonsView: UIView {
         return view
     }()
     
-    // Создаем свойство объекта класса счетчик для изменения количества людей в personsCountLabel через кнопки downButton и upButton
+    // Creating a var for changing the personCountLabel through personIncreaseButton and personDecreaseButton
     var personCounter:Int = 0
     
     let personIncreaseButton: UIButton = {
@@ -68,28 +68,6 @@ class PersonsView: UIView {
         button.backgroundColor = #colorLiteral(red: 0.4941176471, green: 0.9051901698, blue: 1, alpha: 0.7538803808)
         return button
     }()
-   
-// MARK: Логика работы кнопок увеличения/уменьшения количества людей (personIncreaseButton/personDecreaseButton)
-        
-    @objc func upButtonTapped() {
-        if personCounter > 0 {
-            personIncreaseButton.isEnabled = true
-            personCounter += 1
-            personCountLabel.text = "\(personCounter)"
-        }
-        personCounter += 1
-            personCountLabel.text = "\(personCounter)"
-    }
-    
-    @objc func downButtonTapped() {
-        
-        if personCounter == 0 {
-            personIncreaseButton.isEnabled = false
-        } else {
-            personCounter -= 1
-            personCountLabel.text = "\(personCounter)"
-        }
-    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -101,7 +79,27 @@ class PersonsView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-  
+    // Logics of personIncrease and personDecrease buttons
+            
+        @objc func upButtonTapped() {
+            if personCounter > 0 {
+                personIncreaseButton.isEnabled = true
+                personCounter += 1
+                personCountLabel.text = "\(personCounter)"
+            }
+            personCounter += 1
+                personCountLabel.text = "\(personCounter)"
+        }
+        
+        @objc func downButtonTapped() {
+            
+            if personCounter == 0 {
+                personIncreaseButton.isEnabled = false
+            } else {
+                personCounter -= 1
+                personCountLabel.text = "\(personCounter)"
+            }
+        }
     fileprivate func setupView() {
         translatesAutoresizingMaskIntoConstraints = false
         addSubview(personsLabel)

@@ -46,7 +46,7 @@ extension MainViewController {
     }
     
     // This method creates notification alert with the calculation result
-    private func showAlert() { // Уведомления нужно помещать в метод
+    private func showAlert() { 
         let result = calculateCheckTips()
         let alertController = UIAlertController(title: "Tips per person", message: "\(result)", preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default)

@@ -71,7 +71,7 @@ class TotalBillView: UIView, UITextFieldDelegate {
         self.endEditing(true)
     }
     
-    // Реализация метода UITextFieldDelegate для скрытия клавиатуры при нажатии Return
+    // This is method for hiding keyboard when Return is pressed
        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
            sumTextField.resignFirstResponder()
            return true

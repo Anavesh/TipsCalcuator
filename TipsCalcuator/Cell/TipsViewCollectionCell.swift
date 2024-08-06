@@ -49,6 +49,5 @@ class TipsViewCollectionCell: UICollectionViewCell {
             tipsAmountLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             tipsAmountLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
-        
     }
 }
